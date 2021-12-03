@@ -6,7 +6,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
 	
-    <title>Home | Medalea</title>
+    <title>{{ title }}</title>
 
 	<!-- Naše vlastní CSS -->
 	<link rel="stylesheet" href="/css/style.css">
@@ -40,9 +40,7 @@
 
     <main class="main">
 
-    
-
-
+    {{ content | safe }}
 
     </main>
     
