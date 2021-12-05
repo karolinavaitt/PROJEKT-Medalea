@@ -5,13 +5,15 @@
 @use 'header';
 @use 'header-other';
 @use 'menu-other';
+@use 'about';
 
 
 .title,
-.preview__title {
+h3 {
     font-size: 28px;
     font-family: promenne.$titlefont;
     color: promenne.$titlecolor;
+    margin-top: 0;
 }
 
 .hero {
@@ -30,7 +32,7 @@
 }
 
 
-.introducing p {
+p {
     text-align: justify;
     font-size: promenne.$fontsize;
     @media screen and (min-width: 640px) {
