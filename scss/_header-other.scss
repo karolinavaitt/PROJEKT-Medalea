@@ -1,0 +1,35 @@
+@use 'promenne';
+@use 'zaklad';
+
+.header__other {
+    position: relative;
+}
+.header__wrapper--other {
+    position: fixed;
+    left: 0; 
+    top: 0;
+    width: 100%;
+    background: white;
+    border-bottom: 1px solid promenne.$titlecolor;
+    @media screen and (max-width: 639px) {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        justify-items: center;
+        align-items: center;
+    }
+    
+}
+
+.logo__img--other {
+    fill: promenne.$titlecolor;
+          }
+
+.logo{
+    margin: 20px auto;
+    display: block;
+    width: 300px;
+    @media screen and (max-width: 639px) {
+        width: 150px;
+        margin: 10px;
+        }
+}
