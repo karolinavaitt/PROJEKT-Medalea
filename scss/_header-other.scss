@@ -1,10 +1,8 @@
 @use 'promenne';
 @use 'zaklad';
+@use 'menu-other';
 
 .header__other {
-    position: relative;
-}
-.header__wrapper--other {
     position: fixed;
     left: 0; 
     top: 0;
@@ -33,3 +31,10 @@
         margin: 10px;
         }
 }
+
+.body__other {
+    padding-top: 192px;
+    @media screen and (max-width: 639px) {
+        padding-top: 100px;
+        }
+   }

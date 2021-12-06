@@ -1,0 +1,41 @@
+@use 'promenne';
+@use 'zaklad';
+
+.sperky {
+    padding: promenne.$spacer;
+    @media screen and (min-width: 940px) {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+        max-width: 1100px;
+           }
+}
+.box {
+    display: flex;
+    border: 1px solid promenne.$titlecolor;
+    padding: promenne.$spacer;
+    margin-bottom: promenne.$spacer;
+    max-width: 340px;
+    margin: 0 auto 20px auto;
+    @media screen and (min-width: 940px) {
+        margin: 0 auto;
+    }
+    
+    &__link {
+    text-decoration: none;
+    color: promenne.$textcolor;
+    flex: 1;
+    background: rgba(201, 97, 96, 0.4);
+    display: flex;
+    align-items: center;
+    padding-left: 30px;
+            }
+    
+    &__link:hover {
+        background: rgba(201, 97, 96, 0.9); 
+    }
+    
+    &__img {
+    width: 50%;
+    }
+}
