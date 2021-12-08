@@ -26,8 +26,7 @@
 }
 .about__img {
     max-width: 100%;
-    max-width: 100%;
-    object-fit: contain;
+    object-fit: cover;
     display: block;
     margin: 20px auto 0 auto;
     @media screen and (min-width: 560px) and (max-width: 939px) {
@@ -39,6 +38,12 @@
     }
 }
 
+
 .about p {
     margin-right: 0;
+}
+
+.kontakt__content p,
+.kontakt__content h2 {
+    text-align: center;
 }
