@@ -5,10 +5,17 @@
                 
     <nav class="menu">             
         <input type="checkbox" class="menu__checkbox" id="menu-checkbox">
-        <label for="menu-checkbox" class="menu__toggler">☰</label>
+        <label for="menu-checkbox" class="menu__toggler--other">☰</label>
         <ul class="menu__list">
-            <li class="menu__item"><a href="/sperky/" class="menu__link--other">Šperky</a></li>
+            <li class="menu__item--sperky"><a href="/sperky/" class="menu__link--other">Šperky</a>
+                <ul class="menu__submenu--other">
+                    <li><a href="/sperky/nausnice/">Náušnice</a></li>
+                    <li><a href="/sperky/broze/">Brože</a></li>
+                    <li><a href="/sperky/nahrdelniky/">Náhrdelníky</a>
+                </ul>
+            </li>
             <li class="menu__item"><a href="/papir/" class="menu__link--other">Papír</a></li>
+            <li class="menu__item"><a href="/obchod/" class="menu__link--other">Obchod</a></li>
             <li class="menu__item"><a href="/onas/" class="menu__link--other">O nás</a></li>
             <li class="menu__item"><a href="/blog/" class="menu__link--other">Blog</a></li>
             <li class="menu__item"><a href="/kontakt/" class="menu__link--other">Kontakt</a></li>

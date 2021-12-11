@@ -10,6 +10,7 @@
 @use 'nausnice';
 @use 'clanek';
 @use 'broze';
+@use 'obchod';
 
 
 .title,
@@ -37,7 +38,6 @@ h2 {
 
 
 p {
-    text-align: justify;
     font-size: promenne.$fontsize;
     @media screen and (min-width: 640px) {
         margin-right: 60px;
@@ -66,24 +66,23 @@ p {
 //work section
 
 .work {
+    padding: promenne.$spacer;
+    text-align: center;
     @media screen and (min-width: 640px) {
     display: grid;
+    gap: 10px;
     grid-template-columns: repeat(3, 1fr);
     max-width: 1100px;
     margin: 0 auto;
     }
 }
+
 .preview {
-    position: relative;
-    z-index: -1;
-    margin-bottom: 40px;
-    
+    margin: 0 auto;
     &__img {
         height: 300px;
         width: 300px;
-        object-fit: cover;
-        display: block;
-        margin: 0 auto;
+        object-fit: cover; 
         @media screen and (min-width: 640px) and (max-width: 960px){
             height: 200px;
             width: 200px;
@@ -93,19 +92,34 @@ p {
         text-align: center;
     }
     &__name  {
-        text-align: center;
-        color: white;
-        position: absolute;
-        margin-left: auto;
-        margin-right: auto;
-        left: 0;
-        right: 0;
-        bottom: 35%;
         font-weight: 400;
-        background-color: rgba(201, 97, 96, 0.7);
-        width: 100px;
+        padding:10px;
+        background-color: rgba(201, 97, 96, 0.6);
+        position: absolute;
+        display: block;
+        color: white;
+        top: -120px;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        @media screen and (min-width: 640px) and (max-width: 960px){
+            top: -80px;
+        } 
     }
+    &__name:hover {
+        background-color: promenne.$titlecolor;
+    }
+    
+    &__link{
+        position: relative;
+    }      
 }
+
+   
+
+
+
+
+
 
 .blog__title {
     text-align: center;
@@ -146,4 +160,8 @@ p {
     &__link:hover {
         color: promenne.$titlecolor;
     }
+}
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
 }

@@ -17,6 +17,12 @@ body {
   left: -9999px;
 }
 
+@media screen and (max-width: 639px) {
+  .menu {
+    position: relative;
+  }
+}
+
 .menu__list {
   display: none;
   list-style: none;
@@ -25,14 +31,18 @@ body {
 }
 @media screen and (max-width: 639px) {
   .menu__list {
-    position: fixed;
+    position: absolute;
+    top: 56px;
+    left: -900%;
     background-color: white;
+    width: 320px;
   }
 }
 
 .menu__toggler {
   cursor: pointer;
-  color: #575555;
+  color: white;
+  font-size: 30px;
 }
 
 .menu__link {
@@ -49,11 +59,69 @@ body {
 @media screen and (max-width: 639px) {
   .menu__link {
     color: #575555;
+    text-align: center;
   }
 }
 
 .menu__link:hover {
   background-color: lightcoral;
+}
+
+.menu__submenu a {
+  display: block;
+  padding: 15px;
+  text-decoration: none;
+  border-bottom: 1px solid #C96160;
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  background-color: #ecb5b5;
+}
+@media screen and (max-width: 639px) {
+  .menu__submenu a {
+    display: none;
+  }
+}
+
+.menu__submenu a:hover {
+  background-color: rgba(201, 97, 96, 0.6);
+}
+@media screen and (max-width: 639px) {
+  .menu__submenu a:hover {
+    display: none;
+  }
+}
+
+.menu__link:hover {
+  background-color: #ecb5b5;
+}
+
+.menu__submenu {
+  display: none;
+  position: absolute;
+  color: white;
+  left: 0;
+  top: 100%;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  min-width: 150px;
+}
+
+.menu__item--sperky {
+  position: relative;
+}
+
+.menu__item--sperky:hover .menu__submenu {
+  display: block;
+}
+@media screen and (max-width: 639px) {
+  .menu__item--sperky:hover .menu__submenu {
+    display: none;
+  }
 }
 
 @media screen and (max-width: 639px) {
@@ -193,12 +261,13 @@ header {
   left: 0;
   top: 0;
   width: 100%;
-  background: rgba(201, 97, 96, 0.7);
+  z-index: 2;
+  background: rgba(201, 96, 136, 0.7);
 }
 @media screen and (max-width: 639px) {
   .header__wrapper {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 2fr 1fr;
     justify-items: center;
     align-items: center;
   }
@@ -249,22 +318,10 @@ header {
   left: -9999px;
 }
 
-.menu__list {
-  display: none;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-@media screen and (max-width: 639px) {
-  .menu__list {
-    position: fixed;
-    background-color: white;
-  }
-}
-
-.menu__toggler {
+.menu__toggler--other {
   cursor: pointer;
   color: #575555;
+  font-size: 30px;
 }
 
 .menu__link--other {
@@ -281,11 +338,76 @@ header {
 @media screen and (max-width: 639px) {
   .menu__link--other {
     color: #575555;
+    text-align: center;
   }
 }
 
+.menu__submenu--other a {
+  display: block;
+  padding: 15px;
+  text-decoration: none;
+  border-bottom: 1px solid #C96160;
+  color: #C96160;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+@media screen and (max-width: 639px) {
+  .menu__submenu--other a {
+    display: none;
+  }
+}
+
+.menu__submenu--other a:hover {
+  background-color: rgba(201, 97, 96, 0.4);
+}
+
 .menu__link--other:hover {
-  background-color: lightcoral;
+  background-color: #ecb5b5;
+}
+
+.menu__submenu--other {
+  display: none;
+  position: absolute;
+  color: #C96160;
+  left: 0;
+  top: 100%;
+  background-color: white;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  min-width: 150px;
+}
+@media screen and (max-width: 639px) {
+  .menu__submenu--other {
+    display: none;
+  }
+}
+
+.menu__list {
+  display: none;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+@media screen and (max-width: 639px) {
+  .menu__list {
+    position: absolute;
+    top: 56px;
+    left: -900%;
+    background-color: white;
+    width: 320px;
+  }
+}
+
+.menu__item--sperky {
+  position: relative;
+}
+
+.menu__item--sperky:hover .menu__submenu--other {
+  display: block;
 }
 
 @media screen and (max-width: 639px) {
@@ -294,7 +416,7 @@ header {
   }
 }
 @media screen and (min-width: 640px) {
-  .menu__toggler {
+  .menu__toggler--other {
     display: none;
   }
 
@@ -318,7 +440,7 @@ header {
 @media screen and (max-width: 639px) {
   .header__other {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 2fr 1fr;
     justify-items: center;
     align-items: center;
   }
@@ -400,6 +522,44 @@ header {
   margin-right: 0;
 }
 
+.kontakt {
+  padding: 20px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+@media screen and (min-width: 640px) {
+  .kontakt {
+    display: flex;
+    padding: 60px;
+    height: 420px;
+  }
+}
+.kontakt__img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  flex: 1 1 50%;
+}
+@media screen and (max-width: 639px) {
+  .kontakt__img {
+    height: 250px;
+  }
+}
+.kontakt p {
+  margin-right: 0;
+}
+
+.kontakt__content {
+  background-color: rgba(201, 97, 96, 0.3);
+  padding: 20px;
+}
+@media screen and (min-width: 640px) {
+  .kontakt__content {
+    flex: 1 0 50%;
+  }
+}
+
 .kontakt__content p,
 .kontakt__content h2 {
   text-align: center;
@@ -460,6 +620,11 @@ header {
   width: 50%;
 }
 
+.sperky__text {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
 .sperky__title {
   text-align: center;
   margin: 20px 0 0 0;
@@ -479,7 +644,7 @@ header {
   }
 }
 
-.foto img {
+.kontejner img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
@@ -562,14 +727,71 @@ header {
   margin-right: 0;
 }
 
-.sperky__foto {
+.kontejner__broze img {
   max-width: 100%;
   max-height: 500px;
   display: block;
   -o-object-fit: cover;
      object-fit: cover;
+  margin: 0 auto;
+}
+
+.obchod {
+  max-width: 1100px;
   padding: 20px;
   margin: 0 auto;
+  text-align: center;
+}
+@media screen and (min-width: 940px) {
+  .obchod {
+    text-align: left;
+    padding: 30px 60px;
+  }
+}
+.obchod__ikony img {
+  width: 130px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  padding: 20px;
+}
+.obchod__link {
+  color: #575555;
+}
+.obchod__link:hover {
+  color: #C96160;
+}
+.obchod p {
+  margin-right: 0;
+}
+.obchod h2 {
+  font-size: 32px;
+}
+.obchod__content h2 {
+  font-size: 26px;
+  margin-bottom: 8px;
+  margin-top: 40px;
+}
+@media screen and (min-width: 940px) {
+  .obchod__content h2 {
+    margin: 0;
+  }
+}
+.obchod__content p {
+  line-height: 1.5;
+}
+@media screen and (min-width: 940px) {
+  .obchod__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 250px;
+    margin-top: 40px;
+    align-items: center;
+  }
+}
+
+.map {
+  width: 100%;
+  height: 250px;
 }
 
 .title,
@@ -598,7 +820,6 @@ h2 {
 }
 
 p {
-  text-align: justify;
   font-size: 14px;
 }
 @media screen and (min-width: 640px) {
@@ -627,9 +848,14 @@ p {
   color: #29135c;
 }
 
+.work {
+  padding: 20px;
+  text-align: center;
+}
 @media screen and (min-width: 640px) {
   .work {
     display: grid;
+    gap: 10px;
     grid-template-columns: repeat(3, 1fr);
     max-width: 1100px;
     margin: 0 auto;
@@ -637,17 +863,13 @@ p {
 }
 
 .preview {
-  position: relative;
-  z-index: -1;
-  margin-bottom: 40px;
+  margin: 0 auto;
 }
 .preview__img {
   height: 300px;
   width: 300px;
   -o-object-fit: cover;
      object-fit: cover;
-  display: block;
-  margin: 0 auto;
 }
 @media screen and (min-width: 640px) and (max-width: 960px) {
   .preview__img {
@@ -659,17 +881,26 @@ p {
   text-align: center;
 }
 .preview__name {
-  text-align: center;
-  color: white;
-  position: absolute;
-  margin-left: auto;
-  margin-right: auto;
-  left: 0;
-  right: 0;
-  bottom: 35%;
   font-weight: 400;
-  background-color: rgba(201, 97, 96, 0.7);
-  width: 100px;
+  padding: 10px;
+  background-color: rgba(201, 97, 96, 0.6);
+  position: absolute;
+  display: block;
+  color: white;
+  top: -120px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+@media screen and (min-width: 640px) and (max-width: 960px) {
+  .preview__name {
+    top: -80px;
+  }
+}
+.preview__name:hover {
+  background-color: #C96160;
+}
+.preview__link {
+  position: relative;
 }
 
 .blog__title {
@@ -709,4 +940,9 @@ p {
 }
 .clanek__link:hover {
   color: #C96160;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
 }/*# sourceMappingURL=style.css.map */

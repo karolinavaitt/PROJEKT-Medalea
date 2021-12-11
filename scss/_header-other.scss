@@ -11,7 +11,7 @@
     border-bottom: 1px solid promenne.$titlecolor;
     @media screen and (max-width: 639px) {
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: 2fr 1fr;
         justify-items: center;
         align-items: center;
     }

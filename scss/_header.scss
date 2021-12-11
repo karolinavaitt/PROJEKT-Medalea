@@ -19,14 +19,14 @@ header {
     left: 0; 
     top: 0;
     width: 100%;
-    background: rgba(201, 97, 96, 0.7);
+    z-index: 2;
+    background: rgba(201, 96, 136, 0.7);
     @media screen and (max-width: 639px) {
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: 2fr 1fr;
         justify-items: center;
         align-items: center;
     }
-    
 }
 
 .logo__img {
@@ -64,3 +64,4 @@ header {
 .body__main {
     padding-top: 0;
 }
+
