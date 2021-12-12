@@ -922,6 +922,9 @@ header {
     font-size: 17px;
   }
 }
+.clanek__odstavec {
+  text-align: justify;
+}
 .clanek__img {
   width: 40%;
   height: 250px;

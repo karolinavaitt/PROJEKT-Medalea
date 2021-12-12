@@ -10,7 +10,7 @@ title: Blog
     <div class="clanek">
         <div class="clanek__obsah">
             <h2>{{ prispevek.data.title }}</h2>
-            <p>{{ prispevek.templateContent | striptags(true) | escape | truncate(200, true, '...') | safe }}</p>
+            <p class="clanek__odstavec">{{ prispevek.templateContent | striptags(true) | escape | truncate(200, true, '...') | safe }}</p>
             <p><a class="clanek__link" href="{{ prispevek.url }}">celý článek</a></p>
         </div>
         <img class="clanek__img" src="/images/{{ prispevek.data.foto }}" alt="{{ prispevek.data.alt }}">
