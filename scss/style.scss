@@ -11,6 +11,7 @@
 @use 'clanek';
 @use 'broze';
 @use 'obchod';
+@use 'blog';
 
 
 .title,
@@ -116,51 +117,6 @@ p {
 
    
 
-
-
-
-
-
-.blog__title {
-    text-align: center;
-   }
-
-.blog {
-    max-width: 1100px;
-    padding: promenne.$spacer;
-    margin: 0 auto;
-   }
-
-.clanek {
-    display: flex;
-    border: 1px solid promenne.$titlecolor;
-    padding: promenne.$spacer;
-    margin: 0 auto promenne.$spacer auto;
-    max-width: 700px;
-       
-    &__obsah {
-        flex: 0 0 60%;
-    }
-
-    &__obsah h2 {
-        @media screen and (max-width: 350px) {
-            font-size: 17px;
-            }
-    }
-
-    &__img {
-        width: 40%;
-        object-fit: cover;
-        flex: 0 0 40%;
-        margin-right: promenne.$spacer;
-    }
-    &__link {
-        color: promenne.$textcolor;
-    }
-    &__link:hover {
-        color: promenne.$titlecolor;
-    }
-}
 .container {
     max-width: 1100px;
     margin: 0 auto;
