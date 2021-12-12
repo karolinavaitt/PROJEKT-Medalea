@@ -71,7 +71,7 @@ body {
   display: block;
   padding: 15px;
   text-decoration: none;
-  border-bottom: 1px solid #C96160;
+  border-bottom: 1px solid #b95e72;
   color: white;
   font-family: "Montserrat", sans-serif;
   font-weight: 300;
@@ -145,7 +145,7 @@ body {
 }
 footer {
   padding: 20px;
-  border-top: 1px solid #C96160;
+  border-top: 1px solid #b95e72;
 }
 footer h1 {
   text-transform: uppercase;
@@ -179,7 +179,7 @@ footer h1 {
   }
 }
 .instagram-logo a {
-  fill: #C96160;
+  fill: #b95e72;
 }
 
 .footer__list {
@@ -200,7 +200,7 @@ footer h1 {
 .footer__link,
 .footer__item p {
   text-decoration: none;
-  color: #C96160;
+  color: #b95e72;
   font-family: "Montserrat", sans-serif;
   font-size: 14px;
   letter-spacing: 1.5px;
@@ -250,19 +250,62 @@ header {
   -o-object-fit: cover;
      object-fit: cover;
 }
-@media screen and (min-width: 639px) {
+@media screen and (min-width: 640px) {
   .background {
     height: 100vh;
+    -webkit-animation-name: expand;
+            animation-name: expand;
+    -webkit-animation-duration: 3s;
+            animation-duration: 3s;
+    -webkit-animation-delay: 0s;
+            animation-delay: 0s;
+    -webkit-animation-iteration-count: 1;
+            animation-iteration-count: 1;
+    -webkit-animation-timing-function: ease;
+            animation-timing-function: ease;
   }
 }
 
+@-webkit-keyframes expand {
+  0% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes expand {
+  0% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@-webkit-keyframes background {
+  0% {
+    background-color: rgba(150, 87, 108, 0.6);
+  }
+  100% {
+    background-color: #b95e72;
+  }
+}
+@keyframes background {
+  0% {
+    background-color: rgba(150, 87, 108, 0.6);
+  }
+  100% {
+    background-color: #b95e72;
+  }
+}
 .header__wrapper {
   position: fixed;
   left: 0;
   top: 0;
   width: 100%;
   z-index: 2;
-  background: rgba(201, 96, 136, 0.7);
+  background: #b95e72;
 }
 @media screen and (max-width: 639px) {
   .header__wrapper {
@@ -270,6 +313,20 @@ header {
     grid-template-columns: 2fr 1fr;
     justify-items: center;
     align-items: center;
+  }
+}
+@media screen and (min-width: 640px) {
+  .header__wrapper {
+    -webkit-animation-name: background;
+            animation-name: background;
+    -webkit-animation-duration: 3s;
+            animation-duration: 3s;
+    -webkit-animation-delay: 0s;
+            animation-delay: 0s;
+    -webkit-animation-iteration-count: 1;
+            animation-iteration-count: 1;
+    -webkit-animation-timing-function: ease;
+            animation-timing-function: ease;
   }
 }
 
@@ -289,10 +346,27 @@ header {
   }
 }
 
+@-webkit-keyframes posun {
+  0% {
+    transform: translateX(-700px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes posun {
+  0% {
+    transform: translateX(-700px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
 .quote {
   position: absolute;
   padding: 15px;
-  background: rgba(201, 97, 96, 0.7);
+  background: rgba(150, 87, 108, 0.6);
   font-size: 18px;
   letter-spacing: 2px;
   text-transform: uppercase;
@@ -302,10 +376,20 @@ header {
   left: 40px;
   bottom: 15%;
 }
-@media screen and (min-width: 639px) {
+@media screen and (min-width: 640px) {
   .quote {
     font-size: 25px;
     padding: 20px;
+    -webkit-animation-name: posun;
+            animation-name: posun;
+    -webkit-animation-duration: 3s;
+            animation-duration: 3s;
+    -webkit-animation-delay: 0s;
+            animation-delay: 0s;
+    -webkit-animation-iteration-count: 1;
+            animation-iteration-count: 1;
+    -webkit-animation-timing-function: ease;
+            animation-timing-function: ease;
   }
 }
 
@@ -328,7 +412,7 @@ header {
   display: block;
   padding: 15px;
   text-decoration: none;
-  color: #C96160;
+  color: #b95e72;
   font-family: "Montserrat", sans-serif;
   font-weight: 300;
   font-size: 14px;
@@ -346,8 +430,8 @@ header {
   display: block;
   padding: 15px;
   text-decoration: none;
-  border-bottom: 1px solid #C96160;
-  color: #C96160;
+  border-bottom: 1px solid #b95e72;
+  color: #b95e72;
   font-family: "Montserrat", sans-serif;
   font-weight: 300;
   font-size: 14px;
@@ -371,7 +455,7 @@ header {
 .menu__submenu--other {
   display: none;
   position: absolute;
-  color: #C96160;
+  color: #b95e72;
   left: 0;
   top: 100%;
   background-color: white;
@@ -435,7 +519,7 @@ header {
   top: 0;
   width: 100%;
   background: white;
-  border-bottom: 1px solid #C96160;
+  border-bottom: 1px solid #b95e72;
 }
 @media screen and (max-width: 639px) {
   .header__other {
@@ -447,7 +531,7 @@ header {
 }
 
 .logo__img--other {
-  fill: #C96160;
+  fill: #b95e72;
 }
 
 .logo {
@@ -585,7 +669,7 @@ header {
 
 .box {
   display: flex;
-  border: 1px solid #C96160;
+  border: 1px solid #b95e72;
   padding: 20px;
   margin-bottom: 20px;
   max-width: 340px;
@@ -708,7 +792,7 @@ header {
   font-size: 14px;
 }
 .article__link:hover {
-  color: #C96160;
+  color: #b95e72;
 }
 
 .kontejner__broze {
@@ -758,7 +842,7 @@ header {
   color: #575555;
 }
 .obchod__link:hover {
-  color: #C96160;
+  color: #b95e72;
 }
 .obchod p {
   margin-right: 0;
@@ -798,7 +882,7 @@ header {
 h2 {
   font-size: 28px;
   font-family: "Amatic SC", cursive;
-  color: #C96160;
+  color: #b95e72;
   margin-top: 0;
 }
 
@@ -836,7 +920,7 @@ p {
 
 .button {
   border: none;
-  color: #C96160;
+  color: #b95e72;
   font-family: "Montserrat", sans-serif;
   display: inline-block;
   background-color: white;
@@ -883,7 +967,7 @@ p {
 .preview__name {
   font-weight: 400;
   padding: 10px;
-  background-color: rgba(201, 97, 96, 0.6);
+  background-color: rgba(150, 87, 108, 0.6);
   position: absolute;
   display: block;
   color: white;
@@ -897,7 +981,7 @@ p {
   }
 }
 .preview__name:hover {
-  background-color: #C96160;
+  background-color: #b95e72;
 }
 .preview__link {
   position: relative;
@@ -915,7 +999,7 @@ p {
 
 .clanek {
   display: flex;
-  border: 1px solid #C96160;
+  border: 1px solid #b95e72;
   padding: 20px;
   margin: 0 auto 20px auto;
   max-width: 700px;
@@ -939,7 +1023,7 @@ p {
   color: #575555;
 }
 .clanek__link:hover {
-  color: #C96160;
+  color: #b95e72;
 }
 
 .container {

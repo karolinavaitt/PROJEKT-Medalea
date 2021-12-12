@@ -9,9 +9,24 @@ header {
     height: 500px;
     display: block;
     object-fit: cover;
-    @media screen and (min-width: 639px) {
+    @media screen and (min-width: 640px) {
         height: 100vh;
-        }
+        animation-name: expand;
+        animation-duration: 3s;
+        animation-delay: 0s;
+        animation-iteration-count: 1;
+        animation-timing-function: ease;
+    }
+}
+
+@keyframes expand {
+    0% {transform: scale(1.2);}
+    100% {transform: scale(1);}
+}
+
+@keyframes background {
+    0% {background-color: rgba(150, 87, 108, 0.6);}
+    100% {background-color: promenne.$titlecolor;}
 }
 
 .header__wrapper {
@@ -20,12 +35,19 @@ header {
     top: 0;
     width: 100%;
     z-index: 2;
-    background: rgba(201, 96, 136, 0.7);
+    background: promenne.$titlecolor;
     @media screen and (max-width: 639px) {
         display: grid;
         grid-template-columns: 2fr 1fr;
         justify-items: center;
         align-items: center;
+    }
+    @media screen and (min-width: 640px) {
+        animation-name: background;
+        animation-duration: 3s;
+        animation-delay: 0s;
+        animation-iteration-count: 1;
+        animation-timing-function: ease;
     }
 }
 
@@ -43,10 +65,15 @@ header {
         }
 }
 
+@keyframes posun {
+    0% {transform: translateX(-700px);}
+    100% {transform: translateX(0);}
+}
+
 .quote {
     position: absolute;
     padding: 15px;
-    background: rgba(201, 97, 96, 0.7);
+    background: rgba(150, 87, 108, 0.6);
     font-size: 18px;
     letter-spacing: 2px;
     text-transform: uppercase;
@@ -55,10 +82,15 @@ header {
     margin-right: 40px;
     left: 40px;
     bottom: 15%;
-    @media screen and (min-width: 639px) {
+    @media screen and (min-width: 640px) {
         font-size: 25px;
         padding: promenne.$spacer;
-        }
+        animation-name: posun;
+        animation-duration: 3s;
+        animation-delay: 0s;
+        animation-iteration-count: 1;
+        animation-timing-function: ease;
+    }
 }
 
 .body__main {
