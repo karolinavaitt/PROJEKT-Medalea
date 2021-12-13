@@ -11,6 +11,9 @@
     cursor: pointer;
     color: promenne.$textcolor;
 	font-size: 30px;
+	@media screen and (max-width: 639px) {
+	position: relative;
+	}
 }
 
 .menu__link--other {
@@ -25,7 +28,8 @@
     text-transform: uppercase;
     @media screen and (max-width: 639px) {
         color: promenne.$textcolor;
-		text-align: center;        
+		text-align: center; 
+		border-bottom: 1px solid promenne.$titlecolor;       
             }
 }
 
@@ -75,10 +79,10 @@
 	padding: 0;
 	@media screen and (max-width: 639px) {
 		position: absolute;
-		top: 56px;
-		left: -900%;
+		top: 72px;
+		right: -2%;
 		background-color: white;
-		width: 320px;
+		width: 100vw;
 	}
 }
 
