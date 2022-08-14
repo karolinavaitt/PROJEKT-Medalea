@@ -1,5 +1,5 @@
 {
-  "name": "projekt-medalea",
+  "name": "octopus",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -7,10 +7,18 @@
     "build": "npx @11ty/eleventy",
     "serve": "npx @11ty/eleventy --serve"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/karolinavaitt/PROJEKT-Medalea.git"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/karolinavaitt/PROJEKT-Medalea/issues"
+  },
+  "homepage": "https://github.com/karolinavaitt/PROJEKT-Medalea#readme",
   "devDependencies": {
-    "@11ty/eleventy": "^0.12.1"
+    "@11ty/eleventy": "^1.0.1"
   }
 }
